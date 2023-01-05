@@ -1,0 +1,217 @@
+*{
+    font-family: Poppins;
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+  
+    text-decoration: none;
+}
+
+
+/* 
+La navegación empieza aquí
+
+*/
+body{
+    min-height: 100vh;
+}
+
+header{
+    position: relative;
+    top:0; left:0; right:0;
+    background:#00308F;
+    padding: 0px 2%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    display: flex;
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 20px;
+    color: #7CB9E8;
+    float: left;
+    padding-right: 30px;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float:right;
+}
+
+
+
+header .navbar ul li a{
+    font-size:14px;
+    padding: 20px;
+    color: #7CB9E8;
+    display: block;
+    transition: 0.5s;
+}
+
+.special{
+    background-color:#6699CC ;
+    color: #89CFF0;
+}
+
+header .navbar ul li a:hover{
+    background: #6699CC;
+    color: #89CFF0;
+    transition: 0.5s;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #00308F;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+header.navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within> ul, 
+header .navbar ul li:hover> ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    cursor:pointer;
+    display: none;
+}
+
+@media(max-width:991px){
+
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;left:0; right:0;
+        background: #00308F;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    header .navbar ul li{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }  
+    
+    header .navbar ul li ul li{
+        background:#00308F;
+        left: 0;
+        
+    } 
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+#colorstrip{
+    width: 100%; height: 10px;
+    background-color:#720e9e;
+}
+
+
+/*
+
+La navegación termina aquí
+Los estilos de "quiénes somos" empiezan aquí
+
+*/
+
+
+
+.introduction{
+    
+    background-image: url('/images/mainphoto.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+    padding: 20% 20%;
+    border-width: 2px;
+   
+}
+
+.textintroduction{
+    font-size: 40px;
+    background-color: rgba(255,255,255,0.3);
+    text-align: center;
+    border-radius: 25px;
+    border-color: #00308F;
+    border-width: 2px;
+    font-weight: 20;
+    margin-top: 30px;
+}
+
+.presentation{
+    font-size: 20px;
+    padding: 10px 10px;
+}
+
+.presentationimg{
+    width: 50%;
+    height: auto;
+    margin: 0px 25%;
+}
+
+@media (max-width:991px) {
+    
+    .textintroduction{
+        font-size: 20px;
+    }
+
+    .presentation{
+        padding: 10%;
+    }
+
+    .presentationimg{
+        width: 100%;
+        height: auto;
+        margin: 0px;
+    }
+
+}
+
+span{
+    color: red;
+    text-decoration: none;
+    text-transform: lowercase;
+}
